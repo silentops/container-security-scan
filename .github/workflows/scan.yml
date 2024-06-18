@@ -9,14 +9,13 @@ on:
         default: 'develop'      
   # schedule:
   #  - cron:  '49 23 * * *'
-
-permissions:
-  contents: read
-  security-events: write
   
 jobs:
   scan-sarif:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
 
     steps:
       - name: Checkout
